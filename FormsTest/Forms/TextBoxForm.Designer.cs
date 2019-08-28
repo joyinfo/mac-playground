@@ -48,7 +48,7 @@
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(1);
-            this.panel1.Size = new System.Drawing.Size(600, 249);
+            this.panel1.Size = new System.Drawing.Size(600, 449);
             this.panel1.TabIndex = 0;
 
 			// maskedbox
@@ -107,18 +107,22 @@
 			this.button1.Text = "Get Rtf";
 			this.button1.Click += new System.EventHandler(this.button1_Click);
 
+            this.datagrid = new DataGridViewPanel();
+
 			this.panel1.Controls.Add(maskedbox);
-			this.panel1.Controls.Add(textbox1);			this.panel1.Controls.Add(textbox2);
+			this.panel1.Controls.Add(textbox1);
+			this.panel1.Controls.Add(textbox2);
 			this.panel1.Controls.Add(textbox3);
 			this.panel1.Controls.Add(textbox4);
 			this.panel1.Controls.Add(textbox5);
 			this.panel1.Controls.Add(button1);
+			this.panel1.Controls.Add(datagrid);
 
 			// TextBoxForm
 			this.MinimumSize = new System.Drawing.Size(0, 0);
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-			this.ClientSize = new System.Drawing.Size(640, 560);
+			this.ClientSize = new System.Drawing.Size(640, 760);
 			this.Controls.Add(this.panel1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable;
 			this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
@@ -142,5 +146,6 @@
 		private System.Windows.Forms.TextBox textbox4;
 		private System.Windows.Forms.RichTextBox textbox5;
 		private System.Windows.Forms.Button button1;
+        private DataGridViewPanel datagrid;
 	}
 }

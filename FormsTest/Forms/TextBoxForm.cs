@@ -16,7 +16,7 @@ namespace FormsTest
         public TextBoxForm()
         {
             InitializeComponent();
-
+			InitializeDataGrid();
             // Mac layout debugging
             //this.DebugAllControls();
         }
@@ -54,5 +54,28 @@ namespace FormsTest
 			Console.WriteLine(textbox5.Rtf);
 			//MessageBox.Show(textbox5.Rtf, "RTF", MessageBoxButtons.OK, MessageBoxIcon.Information);
 		}
-    }
+ 
+         private void InitializeDataGrid()
+        {
+            datagrid.DataGrid.Rows.Clear();
+            datagrid.DataGrid.Columns.Clear();
+            datagrid.DataGrid.EditMode = DataGridViewEditMode.EditOnEnter;
+            // datagrid.DataGrid.MouseUp += new MouseEventHandler(OnMouseUp);
+            if (datagrid.DataGrid.Columns.Count == 0)
+            {
+                DataGridViewColumn column = new DataGridViewTextBoxColumn();
+                column.HeaderText = "Value";
+                column.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                datagrid.DataGrid.Columns.Add(column);
+
+                column = new DataGridViewComboBoxColumn();
+                column.HeaderText = "Unit";
+                column.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                datagrid.DataGrid.Columns.Add(column);
+
+                datagrid.DataGrid.RowHeadersVisible = false;
+            }
+        }
+
+   }
 }

@@ -249,6 +249,8 @@
     <Compile Include="Forms\MainForm.Swizzle.cs" />
     <Compile Include="Forms\MainForm.NSBackgroundActivity.cs" />
     <Compile Include="Forms\MainForm.NCPrefs.cs" />
+    <Compile Include="Forms\DataGridViewPanel.cs" />
+    <Compile Include="Forms\DataGridViewPanel.Designer.cs" />
   </ItemGroup>
   <ItemGroup>
     <!--<EmbeddedResource Include="LayoutIssues\ImapOptions\ImapOptionsControl.resx">
